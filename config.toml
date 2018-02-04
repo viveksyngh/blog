@@ -11,5 +11,5 @@ publishdir = "docs"
   githubName = "viveksyngh"
   description = "Vivek Singh's Blog"
   stackOverflowId = "2798036"
-  google_analytics = "UA-xxxxxx-xx"
+  google_analytics = "UA-113545356-1"
   hideShareOptions = true
