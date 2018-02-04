@@ -1,0 +1,14 @@
+baseURL = "http://viveksyngh.info/"
+languageCode = "en-us"
+title = "Vivek Kumar Singh"
+theme = "purehugo"
+Paginate = 10
+disqusShortname = "viveksyngh-blog"
+
+[params]
+  twitterName = "viveksyngh"
+  githubName = "viveksyngh"
+  description = "Vivek Singh's Blog"
+  stackOverflowId = "2798036"
+  google_analytics = "UA-xxxxxx-xx"
+   hideShareOptions = true
