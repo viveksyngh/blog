@@ -1,6 +1,8 @@
 ---
 title: "Download a file from URL in Python"
 date: 2018-02-03T01:05:59+05:30
+categories: ["urllib", "python2", "python3"]
+author: "Vivek Singh"
 ---
 
 This blog post is about how to download an image or other static content from a URL in python.

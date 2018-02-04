@@ -9,7 +9,11 @@ publishdir = "docs"
 [params]
   twitterName = "viveksyngh"
   githubName = "viveksyngh"
-  description = "Vivek Singh's Blog"
+  description = "Pythonista, Gopher, Rookie Data Scientist"
   stackOverflowId = "2798036"
+  linkedinName = "viveksyngh"
   google_analytics = "UA-113545356-1"
   hideShareOptions = true
+  facebook = true
+  googleplus = true
+  twitter = true

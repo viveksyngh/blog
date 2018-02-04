@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Urllib on Vivek Kumar Singh</title>
+    <link>http://www.viveksyngh.info/blog/categories/urllib/</link>
+    <description>Recent content in Urllib on Vivek Kumar Singh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Feb 2018 01:05:59 +0530</lastBuildDate>
+    
+	<atom:link href="http://www.viveksyngh.info/blog/categories/urllib/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Download a file from URL in Python</title>
+      <link>http://www.viveksyngh.info/blog/download-file-from-url-python/</link>
+      <pubDate>Sat, 03 Feb 2018 01:05:59 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/download-file-from-url-python/</guid>
+      <description>This blog post is about how to download an image or other static content from a URL in python.
+I am going to accomplish this without any additional python package. We will look at two different solutions for Python2 and Python3. So Let’s get started.
+Before we start downloading the file, we need to get the filename from the URL. The string after the last backslash in URL is the filename.</description>
+    </item>
+    
+  </channel>
+</rss>
