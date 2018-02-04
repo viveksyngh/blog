@@ -1,4 +1,4 @@
-baseURL = "http://viveksyngh.info/blog/"
+baseURL = "http://viveksyngh.info/blog"
 languageCode = "en-us"
 title = "Vivek Kumar Singh"
 theme = "purehugo"
