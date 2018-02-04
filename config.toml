@@ -4,6 +4,7 @@ title = "Vivek Kumar Singh"
 theme = "purehugo"
 Paginate = 10
 disqusShortname = "viveksyngh-blog"
+publishdir = "docs"
 
 [params]
   twitterName = "viveksyngh"
@@ -11,4 +12,4 @@ disqusShortname = "viveksyngh-blog"
   description = "Vivek Singh's Blog"
   stackOverflowId = "2798036"
   google_analytics = "UA-xxxxxx-xx"
-   hideShareOptions = true
+  hideShareOptions = true
