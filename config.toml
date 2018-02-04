@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Vivek Kumar Singh"
 theme = "purehugo"
 Paginate = 10
-disqusShortname = "viveksyngh-blog"
+disqusShortname = "viveksynghblog"
 publishdir = "docs"
 
 [params]
