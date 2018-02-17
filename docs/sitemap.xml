@@ -3,12 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.viveksyngh.info/blog/http-response-in-go/</loc>
+    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.viveksyngh.info/blog/download-file-from-url-python/</loc>
     <lastmod>2018-02-03T01:05:59+05:30</lastmod>
   </url>
   
   <url>
     <loc>http://www.viveksyngh.info/blog/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.viveksyngh.info/blog/categories/go/</loc>
+    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.viveksyngh.info/blog/categories/golang/</loc>
+    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.viveksyngh.info/blog/categories/http/</loc>
+    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.viveksyngh.info/blog/categories/json/</loc>
+    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -25,7 +54,19 @@
   </url>
   
   <url>
+    <loc>http://www.viveksyngh.info/blog/categories/server/</loc>
+    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.viveksyngh.info/blog/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.viveksyngh.info/blog/categories/template/</loc>
+    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -37,7 +78,7 @@
   
   <url>
     <loc>http://www.viveksyngh.info/blog/</loc>
-    <lastmod>2018-02-03T01:05:59+05:30</lastmod>
+    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   

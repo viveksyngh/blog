@@ -1,9 +1,8 @@
 ---
 title: "Http Response in Golang"
 date: 2018-02-17T11:49:41+05:30
-categories: ["golang", "http", "server", "response"]
+categories: ["golang", "go", "http", "server", "template", "json"]
 author: "Vivek Singh"
-draft: true
 ---
 
 In this blog post, I am going to talk about HTTP server and how to respond with different types of HTTP response(text, JSON, template) in Go.
@@ -198,3 +197,5 @@ func templateHandler(w http.ResponseWriter, r *http.Request) {
 ```
 
 Once you run this file and access `http://localhost:8081/template` in the browser, you should be able to see user details rendered with the template.
+
+All code snippets for this blog post can be found [here](https://gist.github.com/viveksyngh/b78f78556532df0a72c4b1182bc68101).

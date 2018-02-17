@@ -11,6 +11,42 @@
     
     
     <item>
+      <title>Go</title>
+      <link>http://www.viveksyngh.info/blog/categories/go/</link>
+      <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>http://www.viveksyngh.info/blog/categories/golang/</link>
+      <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Http</title>
+      <link>http://www.viveksyngh.info/blog/categories/http/</link>
+      <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Json</title>
+      <link>http://www.viveksyngh.info/blog/categories/json/</link>
+      <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python2</title>
       <link>http://www.viveksyngh.info/blog/categories/python2/</link>
       <pubDate>Sat, 03 Feb 2018 01:05:59 +0530</pubDate>
@@ -25,6 +61,24 @@
       <pubDate>Sat, 03 Feb 2018 01:05:59 +0530</pubDate>
       
       <guid>http://www.viveksyngh.info/blog/categories/python3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>http://www.viveksyngh.info/blog/categories/server/</link>
+      <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>http://www.viveksyngh.info/blog/categories/template/</link>
+      <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/template/</guid>
       <description></description>
     </item>
     
