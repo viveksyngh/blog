@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Docker</title>
+      <link>http://www.viveksyngh.info/blog/categories/docker/</link>
+      <pubDate>Tue, 20 Feb 2018 17:46:10 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Go</title>
       <link>http://www.viveksyngh.info/blog/categories/go/</link>
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
@@ -79,6 +88,15 @@
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
       
       <guid>http://www.viveksyngh.info/blog/categories/template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>http://www.viveksyngh.info/blog/categories/ubuntu/</link>
+      <pubDate>Tue, 20 Feb 2018 17:46:10 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/ubuntu/</guid>
       <description></description>
     </item>
     

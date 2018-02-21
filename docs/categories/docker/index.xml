@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Vivek Kumar Singh</title>
+    <link>http://www.viveksyngh.info/blog/categories/docker/</link>
+    <description>Recent content in Docker on Vivek Kumar Singh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Feb 2018 17:46:10 +0530</lastBuildDate>
+    
+	<atom:link href="http://www.viveksyngh.info/blog/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install Docker on Ubuntu</title>
+      <link>http://www.viveksyngh.info/blog/install-docker-on-ubuntu/</link>
+      <pubDate>Tue, 20 Feb 2018 17:46:10 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/install-docker-on-ubuntu/</guid>
+      <description>In this blog post, I am going to show how to install docker on ubuntu 16.04. We will install community edition of docker.
+ Update the apt package index:
+$ sudo apt-get update  Install packages to allow apt to use a repository over HTTPS:
+$ sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ software-properties-common  Add Docker&amp;rsquo;s official GPG key:
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  Verify the key fingerprint, It should match with 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88</description>
+    </item>
+    
+  </channel>
+</rss>
