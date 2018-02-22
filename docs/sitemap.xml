@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.viveksyngh.info/blog/getting-started-with-swarm/</loc>
+    <lastmod>2018-02-21T12:17:47+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.viveksyngh.info/blog/install-docker-on-ubuntu/</loc>
     <lastmod>2018-02-20T17:46:10+05:30</lastmod>
   </url>
@@ -24,7 +29,7 @@
   
   <url>
     <loc>http://www.viveksyngh.info/blog/categories/docker/</loc>
-    <lastmod>2018-02-20T17:46:10+05:30</lastmod>
+    <lastmod>2018-02-21T12:17:47+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -71,6 +76,12 @@
   </url>
   
   <url>
+    <loc>http://www.viveksyngh.info/blog/categories/swarm/</loc>
+    <lastmod>2018-02-21T12:17:47+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.viveksyngh.info/blog/tags/</loc>
     <priority>0</priority>
   </url>
@@ -83,7 +94,7 @@
   
   <url>
     <loc>http://www.viveksyngh.info/blog/categories/ubuntu/</loc>
-    <lastmod>2018-02-20T17:46:10+05:30</lastmod>
+    <lastmod>2018-02-21T12:17:47+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -95,7 +106,7 @@
   
   <url>
     <loc>http://www.viveksyngh.info/blog/</loc>
-    <lastmod>2018-02-20T17:46:10+05:30</lastmod>
+    <lastmod>2018-02-21T12:17:47+05:30</lastmod>
     <priority>0</priority>
   </url>
   

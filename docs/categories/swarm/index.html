@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubuntu &middot; Vivek Kumar Singh</title>
+    <title>Swarm &middot; Vivek Kumar Singh</title>
 
     <meta name="description" content="Pythonista, Gopher, Rookie Data Scientist">
 
     <meta name="generator" content="Hugo 0.32.2" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="true" />
-    <meta name="twitter:title" content="Ubuntu &middot; Vivek Kumar Singh">
+    <meta name="twitter:title" content="Swarm &middot; Vivek Kumar Singh">
     <meta name="twitter:description" content="Pythonista, Gopher, Rookie Data Scientist">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Ubuntu &middot; Vivek Kumar Singh">
+    <meta property="og:title" content="Swarm &middot; Vivek Kumar Singh">
     <meta property="og:description" content="Pythonista, Gopher, Rookie Data Scientist">
 
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
@@ -179,103 +179,6 @@ zb8329nsvdqhhq239k16yo89p     node-2              Ready               Active
 </code></pre>
 
 <p>For detailed reference of commands, please refer <a href="https://docs.docker.com/swarm/reference/">this</a> official documentation.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">20 Feb 2018, 17:46</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://www.viveksyngh.info/blog/install-docker-on-ubuntu/" class="post-title">Install Docker on Ubuntu</a>
-
-                        <p class="post-meta">
-                            
-                                By <strong class="post-author">Vivek Singh</strong>
-                            
-                            
-                                under 
-                                
-                                <a class="post-category post-category-docker" href="http://www.viveksyngh.info/blog/categories/docker">docker</a><a class="post-category post-category-ubuntu" href="http://www.viveksyngh.info/blog/categories/ubuntu">ubuntu</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>In this blog post, I am going to show how to install <code>docker</code> on <code>ubuntu 16.04</code>. We will install community edition of docker.</p>
-
-<ol>
-<li><p>Update the <code>apt</code> package index:</p>
-
-<pre><code class="language-sh">$ sudo apt-get update
-</code></pre></li>
-
-<li><p>Install packages to allow <code>apt</code> to use a repository over HTTPS:</p>
-
-<pre><code class="language-sh">$ sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    software-properties-common
-</code></pre></li>
-
-<li><p>Add Docker&rsquo;s official GPG key:</p>
-
-<pre><code class="language-sh">$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-</code></pre></li>
-
-<li><p>Verify the key fingerprint, It should match with <code>9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88</code></p>
-
-<pre><code class="language-sh">$ sudo apt-key fingerprint 0EBFCD88
-</code></pre></li>
-
-<li><p>Add docker <code>apt</code> repository</p>
-
-<pre><code class="language-sh">$ sudo add-apt-repository \
-&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-$(lsb_release -cs) \
-stable&quot;
-</code></pre></li>
-
-<li><p>Update the <code>apt</code> package index</p>
-
-<pre><code class="language-sh">$ sudo apt-get update
-</code></pre></li>
-
-<li><p>Install the latest version of Docker CE,</p>
-
-<pre><code class="language-sh">$ sudo apt-get install docker-ce
-</code></pre></li>
-
-<li><p>To validate docker installation run below command.</p>
-
-<pre><code class="language-sh">$ sudo docker run hello-world
-</code></pre></li>
-</ol>
-
-<p>If Docker is installed successfully, the above command should download the <code>hello-world</code> latest image from docker hub and run it.
-It will also print some welcome message as well.</p>
-
-<p>Remember, we used <code>sudo</code> to run <code>docker run</code> command above. There are some post-installation steps that you can follow to run <code>docker</code> command a non-root user.</p>
-
-<p>To run docker commands as a non-root user,</p>
-
-<ol>
-<li><p>Create the <code>docker</code> group</p>
-
-<pre><code class="language-sh">$ sudo groupadd docker
-</code></pre></li>
-
-<li><p>Add your user to the <code>docker</code> group</p>
-
-<pre><code class="language-sh">$ sudo usermod -aG docker $USER
-</code></pre></li>
-
-<li><p>Log out and log back in so that your group membership gets updated. Now you run <code>hello-world</code> command as below.</p>
-
-<pre><code class="language-sh">$ docker run hello-world
-</code></pre></li>
-</ol>
 
                     </div>
                 </section>

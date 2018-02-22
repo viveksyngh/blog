@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swarm on Vivek Kumar Singh</title>
+    <link>http://www.viveksyngh.info/blog/categories/swarm/</link>
+    <description>Recent content in Swarm on Vivek Kumar Singh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Feb 2018 12:17:47 +0530</lastBuildDate>
+    
+	<atom:link href="http://www.viveksyngh.info/blog/categories/swarm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting started with Docker Swarm</title>
+      <link>http://www.viveksyngh.info/blog/getting-started-with-swarm/</link>
+      <pubDate>Wed, 21 Feb 2018 12:17:47 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/getting-started-with-swarm/</guid>
+      <description>In this blog post, I am going to talk about how to set up a swarm cluster and some swarm basic commands. I will set up two node swarm cluster as an example.
+I am going to provision two small size instances on cloud service provider called Civo. You can use any other cloud service provider like AWS, GCP, Azure or private cloud to provision instances. After setting up instances make sure that all instances are running on the same network and able to talk to each other.</description>
+    </item>
+    
+  </channel>
+</rss>
