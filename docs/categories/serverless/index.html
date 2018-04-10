@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swarm &middot; Vivek Kumar Singh</title>
+    <title>Serverless &middot; Vivek Kumar Singh</title>
 
     <meta name="description" content="Pythonista, Gopher, Rookie Data Scientist">
 
     <meta name="generator" content="Hugo 0.32.2" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="true" />
-    <meta name="twitter:title" content="Swarm &middot; Vivek Kumar Singh">
+    <meta name="twitter:title" content="Serverless &middot; Vivek Kumar Singh">
     <meta name="twitter:description" content="Pythonista, Gopher, Rookie Data Scientist">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Swarm &middot; Vivek Kumar Singh">
+    <meta property="og:title" content="Serverless &middot; Vivek Kumar Singh">
     <meta property="og:description" content="Pythonista, Gopher, Rookie Data Scientist">
 
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
@@ -209,107 +209,6 @@ functions:
 <pre><code>$ curl http://localhost:8080/function/func1 -d &quot;Hello&quot;
 </code></pre></li>
 </ul>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">21 Feb 2018, 12:17</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://www.viveksyngh.info/blog/getting-started-with-swarm/" class="post-title">Getting started with Docker Swarm</a>
-
-                        <p class="post-meta">
-                            
-                                By <strong class="post-author">Vivek Singh</strong>
-                            
-                            
-                                under 
-                                
-                                <a class="post-category post-category-docker" href="http://www.viveksyngh.info/blog/categories/docker">docker</a><a class="post-category post-category-swarm" href="http://www.viveksyngh.info/blog/categories/swarm">swarm</a><a class="post-category post-category-ubuntu" href="http://www.viveksyngh.info/blog/categories/ubuntu">ubuntu</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>In this blog post, I am going to talk about how to set up a swarm cluster and some swarm basic commands. I will set up two node swarm cluster as an example.</p>
-
-<p>I am going to provision two small size instances on cloud service provider called <a href="https://www.civo.com">Civo</a>. You can use any other cloud service provider like AWS, GCP, Azure or private cloud to provision instances. After setting up instances make sure that all instances are running on the same network and able to talk to each other.</p>
-
-<p>Before we go to actual work, let&rsquo;s discuss some of the important <code>swarm</code> terminologies. A <code>swarm</code> is a group of machines that are running Docker and joined into the cluster. Every swarm has a <code>swarm manager</code> which can execute your commands, or authorize other machines to join the swarm as <code>workers</code>. Every machine in a swarm is referred as <code>nodes</code>.</p>
-
-<p>Now, we will go ahead and install docker engine on both instances. You can follow docker installation guide from official docker documentation <a href="https://docs.docker.com/install/">here</a> or <a href="/blog/install-docker-on-ubuntu">this</a> blog post. Follow corresponding documentation based on the operating system of your instances.</p>
-
-<p>Once you have Docker installed on every instance, choose one of the instances for <code>swarm manager</code> and run the below command to   initiate the <code>swarm</code> cluster.</p>
-
-<pre><code class="language-sh">$ docker swarm init
-</code></pre>
-
-<p>Above command output, prints out a command with a token to be run from <code>workers</code> to join the cluster.</p>
-
-<p>Go to all your worker&rsquo;s instances and run the command:</p>
-
-<pre><code class="language-sh">$ docker swarm join --token &lt;token&gt; &lt;ip&gt;:&lt;port&gt;
-</code></pre>
-
-<p>Where <code>token</code>, <code>ip</code> and <code>port</code> are output from the <code>init</code> command.</p>
-
-<p>List the worker&rsquo;s token for join command:</p>
-
-<pre><code class="language-sh">$ docker swarm join-token worker
-</code></pre>
-
-<p>You can also add more <code>swarm manager</code> to cluster. To get token for <code>manager</code> run the below command from <code>swarm manager</code> and follow the instructions.</p>
-
-<pre><code class="language-sh">$ docker swarm join-token manager
-</code></pre>
-
-<p>List all nodes in swarm:</p>
-
-<pre><code class="language-sh">$ docker node ls
-ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS
-zkocztdahzkdjbk6bhu3jqb8l *   node-1              Ready               Active              Leader
-zb8329nsvdqhhq239k16yo89p     node-2              Ready               Active
-</code></pre>
-
-<p>List all services running in swarm:</p>
-
-<pre><code class="language-sh">$ docker service ls
-</code></pre>
-
-<p>Remove one or more services from swarm:</p>
-
-<pre><code class="language-sh">$ docker service rm &lt;service-name-1&gt; &lt;service-name-2&gt; ...
-</code></pre>
-
-<p>See logs of a service:</p>
-
-<pre><code class="language-sh">$ docker service logs &lt;service-name&gt;
-</code></pre>
-
-<p>Scale a service:</p>
-
-<pre><code class="language-sh">$ docker service scale &lt;service-name&gt;=&lt;replicas&gt;
-</code></pre>
-
-<p>Where <code>&lt;replicas&gt;</code> is number of replica like 2, 3 etc.</p>
-
-<p>Inspect one or more services:</p>
-
-<pre><code class="language-sh">$ docker service inspect &lt;service-name-1&gt; &lt;service-name-2&gt; ...
-</code></pre>
-
-<p>Create a service:</p>
-
-<pre><code class="language-sh">$ docker service create [OPTIONS] &lt;image-name&gt;
-</code></pre>
-
-<p>Update a service:</p>
-
-<pre><code class="language-sh">$ docker service update [OPTIONS] &lt;service-name&gt;
-</code></pre>
-
-<p>For detailed reference of commands, please refer <a href="https://docs.docker.com/swarm/reference/">this</a> official documentation.</p>
 
                     </div>
                 </section>

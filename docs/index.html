@@ -82,6 +82,137 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">22 Feb 2018, 16:41</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://www.viveksyngh.info/blog/getting-started-with-openfaas/" class="post-title">Deploying OpenFaas on Docker Swarm</a>
+
+                        <p class="post-meta">
+                            
+                                By <strong class="post-author">Vivek Singh</strong>
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-docker" href="http://www.viveksyngh.info/blog/categories/docker">docker</a><a class="post-category post-category-swarm" href="http://www.viveksyngh.info/blog/categories/swarm">swarm</a><a class="post-category post-category-openfaas" href="http://www.viveksyngh.info/blog/categories/openfaas">openfaas</a><a class="post-category post-category-serverless" href="http://www.viveksyngh.info/blog/categories/serverless">serverless</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>In this blog post, I am going to talk about how to deploy OpenFaas on Docker Swarm. OpenFaaS (Functions as a Service) is a  framework for building serverless functions with Docker and Kubernetes. To know more about OpenFaas visit this <a href="https://www.openfaas.com/">link</a>.</p>
+
+<p>I have already setup a two node Docker Swarm cluster running on cloud service provider <a href="https://www.civo.com/">Civo</a>. OpenFaas repository contains a script <code>deploy_stack.sh</code> which can be used to deploy OpenFaas stack.</p>
+
+<ul>
+<li><p>Clone the OpenFaaS repository on <code>swarm manager</code> node.</p>
+
+<pre><code class="language-sh">$ git clone https://github.com/openfaas/faas
+</code></pre></li>
+
+<li><p>To deploy OpenFaaS stack, checkout to particular version tag and run <code>deploy_stack.sh</code>.</p>
+
+<pre><code class="language-sh">$ cd faas &amp;&amp; \
+git checkout 0.7.0 &amp;&amp; \
+./deploy_stack.sh
+</code></pre></li>
+
+<li><p>List all running services:</p>
+
+<pre><code class="language-sh">$ docker service ls
+Ouput:
+ID                  NAME                MODE                REPLICAS            IMAGE                              PORTS
+9ul5ba334nme        func_alertmanager   replicated          1/1                 prom/alertmanager:v0.7.1
+fmjjw04nayun        func_base64         replicated          1/1                 functions/alpine:latest
+kfp4q6oafprq        func_echoit         replicated          1/1                 functions/alpine:latest
+pfqylhhsb97t        func_faas-swarm     replicated          1/1                 functions/faas-swarm:0.1.3a
+fg6u3cnp862h        func_gateway        replicated          1/1                 functions/gateway:0.6.16-rc1     *:8080-&gt;8080/tcp
+7jvwaqaresjg        func_hubstats       replicated          1/1                 functions/hubstats:latest
+19hs72xjfop4        func_markdown       replicated          1/1                 functions/markdown-render:latest
+l14inuqg4mc1        func_nats           replicated          1/1                 nats-streaming:0.6.0
+ws8zvp3pcgck        func_nodeinfo       replicated          1/1                 functions/nodeinfo:latest
+rksml98bnk27        func_prometheus     replicated          1/1                 prom/prometheus:v2.0.0           *:9090-&gt;9090/tcp
+z5nezr3j593i        func_queue-worker   replicated          1/1                 functions/queue-worker:0.4
+uodchmg0xyqi        func_wordcount      replicated          1/1                 functions/alpine:latest
+</code></pre></li>
+</ul>
+
+<p>Once everything is deployed, you should have gateway running at <code>http://&lt;ip&gt;:8080</code> and prometheus at <code>http://&lt;ip&gt;:9090</code>.</p>
+
+<p>As we can see, OpenFaas also depolys few sample functions like <code>markdown-render</code>, <code>hubstats</code>, <code>nodeinfo</code> along with the stack.
+OpenFaas also has function store which has sample functions created by OpenFaas community. You can use OpenFaas CLI or gateway interface to deploy functions from store.</p>
+
+<p>Now we will have look at OpenFaas CLI which can be used to create, list, deploy, invoke and remove functions.</p>
+
+<ul>
+<li><p>Let&rsquo;s install OpenFaaS CLI</p>
+
+<pre><code class="language-sh">$ curl -sL cli.openfaas.com | sh
+</code></pre></li>
+
+<li><p>Create a new function using one of the existing function template like (python, python3, node, go, node etc)</p>
+
+<pre><code class="language-sh">$ faas-cli new func1 --lang=python3
+</code></pre></li>
+
+<li><p>Create function command should create files as follows</p>
+
+<pre><code class="language-sh">total 24
+drwxrwxr-x  4 ubuntu ubuntu 4096 Feb 25 06:11 .
+drwxr-xr-x  7 ubuntu ubuntu 4096 Feb 23 16:00 ..
+drwx------  2 ubuntu ubuntu 4096 Feb 25 06:11 func1
+-rw-------  1 ubuntu ubuntu  133 Feb 25 06:11 func1.yml
+-rw-r--r--  1 ubuntu ubuntu   15 Feb 25 06:11 .gitignore
+drwxrwxr-x 13 ubuntu ubuntu 4096 Feb 25 06:11 template
+</code></pre></li>
+</ul>
+
+<p><code>func1.yml</code> file contains the configuration like gateway URL, image name etc. Prepend the image name with dockerhub or your docker registry name to push images.</p>
+
+<pre><code class="language-sh">provider:
+  name: faas
+  gateway: http://localhost:8080
+
+functions:
+  func1:
+    lang: python3
+    handler: ./func1
+    image: viveksyngh/func1
+</code></pre>
+
+<ul>
+<li><p>Build the function image</p>
+
+<pre><code class="language-sh">$ faas-cli build -f func1.yml
+</code></pre></li>
+
+<li><p>Push image to remote repository</p>
+
+<pre><code class="language-sh">$ faas-cli push -f func1.yml
+</code></pre></li>
+
+<li><p>Deploy the function</p>
+
+<pre><code class="language-sh">$ faas-cli deploy -f func1.yml
+</code></pre>
+
+<p>function will be deployed and endpoint to access function will be <code>http://&lt;gateway&gt;/function/&lt;function name&gt;</code>.</p></li>
+
+<li><p>CLI can also be used to invoke the functions</p>
+
+<pre><code class="language-sh">$ echo -n &quot;Hello&quot; | faas-cli invoke func1
+</code></pre>
+
+<p>or CURL can also be used to invoke functions</p>
+
+<pre><code>$ curl http://localhost:8080/function/func1 -d &quot;Hello&quot;
+</code></pre></li>
+</ul>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">21 Feb 2018, 12:17</h1>
                 <section class="post">
                     <header class="post-header">

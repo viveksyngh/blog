@@ -1,7 +1,8 @@
 ---
 title: "Deploying OpenFaas on Docker Swarm"
 date: 2018-02-22T16:41:22+05:30
-draft: true
+categories: ["docker", "swarm", "openfaas", "serverless"]
+author: "Vivek Singh"
 ---
 In this blog post, I am going to talk about how to deploy OpenFaas on Docker Swarm. OpenFaaS (Functions as a Service) is a  framework for building serverless functions with Docker and Kubernetes. To know more about OpenFaas visit this [link](https://www.openfaas.com/).
 

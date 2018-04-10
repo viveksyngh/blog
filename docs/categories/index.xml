@@ -13,7 +13,7 @@
     <item>
       <title>Docker</title>
       <link>http://www.viveksyngh.info/blog/categories/docker/</link>
-      <pubDate>Wed, 21 Feb 2018 12:17:47 +0530</pubDate>
+      <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
       
       <guid>http://www.viveksyngh.info/blog/categories/docker/</guid>
       <description></description>
@@ -56,6 +56,15 @@
     </item>
     
     <item>
+      <title>Openfaas</title>
+      <link>http://www.viveksyngh.info/blog/categories/openfaas/</link>
+      <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/openfaas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python2</title>
       <link>http://www.viveksyngh.info/blog/categories/python2/</link>
       <pubDate>Sat, 03 Feb 2018 01:05:59 +0530</pubDate>
@@ -83,9 +92,18 @@
     </item>
     
     <item>
+      <title>Serverless</title>
+      <link>http://www.viveksyngh.info/blog/categories/serverless/</link>
+      <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
+      
+      <guid>http://www.viveksyngh.info/blog/categories/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Swarm</title>
       <link>http://www.viveksyngh.info/blog/categories/swarm/</link>
-      <pubDate>Wed, 21 Feb 2018 12:17:47 +0530</pubDate>
+      <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
       
       <guid>http://www.viveksyngh.info/blog/categories/swarm/</guid>
       <description></description>
