@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Openfaas &middot; Vivek Kumar Singh</title>
+    <title>My Open Source Journey With OpenFaaS &middot; Vivek Kumar Singh</title>
 
-    <meta name="description" content="Pythonista, Gopher, Rookie Data Scientist">
+    <meta name="description" content="">
 
     <meta name="generator" content="Hugo 0.32.2" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="true" />
-    <meta name="twitter:title" content="Openfaas &middot; Vivek Kumar Singh">
-    <meta name="twitter:description" content="Pythonista, Gopher, Rookie Data Scientist">
+    <meta name="twitter:title" content="My Open Source Journey With OpenFaaS &middot; Vivek Kumar Singh">
+    <meta name="twitter:description" content="">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Openfaas &middot; Vivek Kumar Singh">
-    <meta property="og:description" content="Pythonista, Gopher, Rookie Data Scientist">
+    <meta property="og:title" content="My Open Source Journey With OpenFaaS &middot; Vivek Kumar Singh">
+    <meta property="og:description" content="">
 
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
@@ -81,7 +81,6 @@
         <div>
             
             <div class="posts">
-                
                 <h1 class="content-subhead">04 May 2018, 19:53</h1>
                 <section class="post">
                     <header class="post-header">
@@ -93,13 +92,13 @@
                                 By <strong class="post-author">Vivek Singh</strong>
                             
                             
-                                under 
+                                under
                                 
                                 <a class="post-category post-category-open source" href="http://www.viveksyngh.info/blog/categories/open-source">open source</a><a class="post-category post-category-OpenFaaS" href="http://www.viveksyngh.info/blog/categories/openfaas">OpenFaaS</a>
                             
                         </p>
                     </header>
-
+                    
                     <div class="post-description">
                         <p>It all started in October 2017, I was actively looking for open source project to contribute when I came to know about <a href="https://hacktoberfest.digitalocean.com/">Hacktoberfest</a>. It is a month-long celebration of open source software organized by <a href="https://github.com/">Github</a> and <a href="https://www.digitalocean.com/">Digital Ocean</a>.</p>
 
@@ -132,142 +131,28 @@ I recommend Hacktoberfest to anybody who wants to get started with Open Source C
 <p>If you interested in contributing to OpenFaas, read our getting started guide for contributors <a href="https://docs.openfaas.com/contributing/get-started/">here</a>.</p>
 
                     </div>
+                    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "viveksynghblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
                 </section>
-                
-                <h1 class="content-subhead">22 Feb 2018, 16:41</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://www.viveksyngh.info/blog/getting-started-with-openfaas/" class="post-title">Deploying OpenFaas on Docker Swarm</a>
-
-                        <p class="post-meta">
-                            
-                                By <strong class="post-author">Vivek Singh</strong>
-                            
-                            
-                                under 
-                                
-                                <a class="post-category post-category-docker" href="http://www.viveksyngh.info/blog/categories/docker">docker</a><a class="post-category post-category-swarm" href="http://www.viveksyngh.info/blog/categories/swarm">swarm</a><a class="post-category post-category-openfaas" href="http://www.viveksyngh.info/blog/categories/openfaas">openfaas</a><a class="post-category post-category-serverless" href="http://www.viveksyngh.info/blog/categories/serverless">serverless</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>In this blog post, I am going to talk about how to deploy OpenFaas on Docker Swarm. OpenFaaS (Functions as a Service) is a  framework for building serverless functions with Docker and Kubernetes. To know more about OpenFaas visit this <a href="https://www.openfaas.com/">link</a>.</p>
-
-<p>I have already setup a two node Docker Swarm cluster running on cloud service provider <a href="https://www.civo.com/">Civo</a>. OpenFaas repository contains a script <code>deploy_stack.sh</code> which can be used to deploy OpenFaas stack.</p>
-
-<ul>
-<li><p>Clone the OpenFaaS repository on <code>swarm manager</code> node.</p>
-
-<pre><code class="language-sh">$ git clone https://github.com/openfaas/faas
-</code></pre></li>
-
-<li><p>To deploy OpenFaaS stack, checkout to particular version tag and run <code>deploy_stack.sh</code>.</p>
-
-<pre><code class="language-sh">$ cd faas &amp;&amp; \
-git checkout 0.7.0 &amp;&amp; \
-./deploy_stack.sh
-</code></pre></li>
-
-<li><p>List all running services:</p>
-
-<pre><code class="language-sh">$ docker service ls
-Ouput:
-ID                  NAME                MODE                REPLICAS            IMAGE                              PORTS
-9ul5ba334nme        func_alertmanager   replicated          1/1                 prom/alertmanager:v0.7.1
-fmjjw04nayun        func_base64         replicated          1/1                 functions/alpine:latest
-kfp4q6oafprq        func_echoit         replicated          1/1                 functions/alpine:latest
-pfqylhhsb97t        func_faas-swarm     replicated          1/1                 functions/faas-swarm:0.1.3a
-fg6u3cnp862h        func_gateway        replicated          1/1                 functions/gateway:0.6.16-rc1     *:8080-&gt;8080/tcp
-7jvwaqaresjg        func_hubstats       replicated          1/1                 functions/hubstats:latest
-19hs72xjfop4        func_markdown       replicated          1/1                 functions/markdown-render:latest
-l14inuqg4mc1        func_nats           replicated          1/1                 nats-streaming:0.6.0
-ws8zvp3pcgck        func_nodeinfo       replicated          1/1                 functions/nodeinfo:latest
-rksml98bnk27        func_prometheus     replicated          1/1                 prom/prometheus:v2.0.0           *:9090-&gt;9090/tcp
-z5nezr3j593i        func_queue-worker   replicated          1/1                 functions/queue-worker:0.4
-uodchmg0xyqi        func_wordcount      replicated          1/1                 functions/alpine:latest
-</code></pre></li>
-</ul>
-
-<p>Once everything is deployed, you should have gateway running at <code>http://&lt;ip&gt;:8080</code> and prometheus at <code>http://&lt;ip&gt;:9090</code>.</p>
-
-<p>As we can see, OpenFaas also depolys few sample functions like <code>markdown-render</code>, <code>hubstats</code>, <code>nodeinfo</code> along with the stack.
-OpenFaas also has function store which has sample functions created by OpenFaas community. You can use OpenFaas CLI or gateway interface to deploy functions from store.</p>
-
-<p>Now we will have look at OpenFaas CLI which can be used to create, list, deploy, invoke and remove functions.</p>
-
-<ul>
-<li><p>Let&rsquo;s install OpenFaaS CLI</p>
-
-<pre><code class="language-sh">$ curl -sL cli.openfaas.com | sh
-</code></pre></li>
-
-<li><p>Create a new function using one of the existing function template like (python, python3, node, go, node etc)</p>
-
-<pre><code class="language-sh">$ faas-cli new func1 --lang=python3
-</code></pre></li>
-
-<li><p>Create function command should create files as follows</p>
-
-<pre><code class="language-sh">total 24
-drwxrwxr-x  4 ubuntu ubuntu 4096 Feb 25 06:11 .
-drwxr-xr-x  7 ubuntu ubuntu 4096 Feb 23 16:00 ..
-drwx------  2 ubuntu ubuntu 4096 Feb 25 06:11 func1
--rw-------  1 ubuntu ubuntu  133 Feb 25 06:11 func1.yml
--rw-r--r--  1 ubuntu ubuntu   15 Feb 25 06:11 .gitignore
-drwxrwxr-x 13 ubuntu ubuntu 4096 Feb 25 06:11 template
-</code></pre></li>
-</ul>
-
-<p><code>func1.yml</code> file contains the configuration like gateway URL, image name etc. Prepend the image name with dockerhub or your docker registry name to push images.</p>
-
-<pre><code class="language-sh">provider:
-  name: faas
-  gateway: http://localhost:8080
-
-functions:
-  func1:
-    lang: python3
-    handler: ./func1
-    image: viveksyngh/func1
-</code></pre>
-
-<ul>
-<li><p>Build the function image</p>
-
-<pre><code class="language-sh">$ faas-cli build -f func1.yml
-</code></pre></li>
-
-<li><p>Push image to remote repository</p>
-
-<pre><code class="language-sh">$ faas-cli push -f func1.yml
-</code></pre></li>
-
-<li><p>Deploy the function</p>
-
-<pre><code class="language-sh">$ faas-cli deploy -f func1.yml
-</code></pre>
-
-<p>function will be deployed and endpoint to access function will be <code>http://&lt;gateway&gt;/function/&lt;function name&gt;</code>.</p></li>
-
-<li><p>CLI can also be used to invoke the functions</p>
-
-<pre><code class="language-sh">$ echo -n &quot;Hello&quot; | faas-cli invoke func1
-</code></pre>
-
-<p>or CURL can also be used to invoke functions</p>
-
-<pre><code>$ curl http://localhost:8080/function/func1 -d &quot;Hello&quot;
-</code></pre></li>
-</ul>
-
-                    </div>
-                </section>
-                
             </div>
-            
-
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">
         <ul>
@@ -280,6 +165,7 @@ functions:
         </div>
     </div>
 </div>
+
 
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
