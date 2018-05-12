@@ -2,146 +2,137 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Vivek Kumar Singh</title>
-    <link>http://www.viveksyngh.info/blog/categories/</link>
+    <link>https://www.viveksyngh.info/blog/categories/</link>
     <description>Recent content in Categories on Vivek Kumar Singh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://www.viveksyngh.info/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.viveksyngh.info/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Docker</title>
-      <link>http://www.viveksyngh.info/blog/categories/docker/</link>
+      <link>https://www.viveksyngh.info/blog/categories/docker/</link>
       <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/docker/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>http://www.viveksyngh.info/blog/categories/go/</link>
+      <link>https://www.viveksyngh.info/blog/categories/go/</link>
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/go/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>http://www.viveksyngh.info/blog/categories/golang/</link>
+      <link>https://www.viveksyngh.info/blog/categories/golang/</link>
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/golang/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Http</title>
-      <link>http://www.viveksyngh.info/blog/categories/http/</link>
+      <link>https://www.viveksyngh.info/blog/categories/http/</link>
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/http/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/http/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Json</title>
-      <link>http://www.viveksyngh.info/blog/categories/json/</link>
+      <link>https://www.viveksyngh.info/blog/categories/json/</link>
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/json/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Open Source</title>
-      <link>http://www.viveksyngh.info/blog/categories/open-source/</link>
-      <pubDate>Fri, 04 May 2018 19:53:58 +0530</pubDate>
-      
-      <guid>http://www.viveksyngh.info/blog/categories/open-source/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Openfaas</title>
-      <link>http://www.viveksyngh.info/blog/categories/openfaas/</link>
-      <pubDate>Fri, 04 May 2018 19:53:58 +0530</pubDate>
+      <link>https://www.viveksyngh.info/blog/categories/openfaas/</link>
+      <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/openfaas/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/openfaas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python2</title>
-      <link>http://www.viveksyngh.info/blog/categories/python2/</link>
+      <link>https://www.viveksyngh.info/blog/categories/python2/</link>
       <pubDate>Sat, 03 Feb 2018 01:05:59 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/python2/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/python2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python3</title>
-      <link>http://www.viveksyngh.info/blog/categories/python3/</link>
+      <link>https://www.viveksyngh.info/blog/categories/python3/</link>
       <pubDate>Sat, 03 Feb 2018 01:05:59 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/python3/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/python3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Server</title>
-      <link>http://www.viveksyngh.info/blog/categories/server/</link>
+      <link>https://www.viveksyngh.info/blog/categories/server/</link>
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/server/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/server/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Serverless</title>
-      <link>http://www.viveksyngh.info/blog/categories/serverless/</link>
+      <link>https://www.viveksyngh.info/blog/categories/serverless/</link>
       <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/serverless/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/serverless/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Swarm</title>
-      <link>http://www.viveksyngh.info/blog/categories/swarm/</link>
+      <link>https://www.viveksyngh.info/blog/categories/swarm/</link>
       <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/swarm/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/swarm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Template</title>
-      <link>http://www.viveksyngh.info/blog/categories/template/</link>
+      <link>https://www.viveksyngh.info/blog/categories/template/</link>
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/template/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/template/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu</title>
-      <link>http://www.viveksyngh.info/blog/categories/ubuntu/</link>
+      <link>https://www.viveksyngh.info/blog/categories/ubuntu/</link>
       <pubDate>Wed, 21 Feb 2018 12:17:47 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/ubuntu/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Urllib</title>
-      <link>http://www.viveksyngh.info/blog/categories/urllib/</link>
+      <link>https://www.viveksyngh.info/blog/categories/urllib/</link>
       <pubDate>Sat, 03 Feb 2018 01:05:59 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/categories/urllib/</guid>
+      <guid>https://www.viveksyngh.info/blog/categories/urllib/</guid>
       <description></description>
     </item>
     

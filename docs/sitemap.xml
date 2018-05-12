@@ -3,138 +3,127 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/my-open-source-journey-with-openfaas/</loc>
-    <lastmod>2018-05-04T19:53:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.viveksyngh.info/blog/getting-started-with-openfaas/</loc>
+    <loc>https://www.viveksyngh.info/blog/getting-started-with-openfaas/</loc>
     <lastmod>2018-02-22T16:41:22+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/getting-started-with-swarm/</loc>
+    <loc>https://www.viveksyngh.info/blog/getting-started-with-swarm/</loc>
     <lastmod>2018-02-21T12:17:47+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/install-docker-on-ubuntu/</loc>
+    <loc>https://www.viveksyngh.info/blog/install-docker-on-ubuntu/</loc>
     <lastmod>2018-02-20T17:46:10+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/http-response-in-go/</loc>
+    <loc>https://www.viveksyngh.info/blog/http-response-in-go/</loc>
     <lastmod>2018-02-17T11:49:41+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/download-file-from-url-python/</loc>
+    <loc>https://www.viveksyngh.info/blog/download-file-from-url-python/</loc>
     <lastmod>2018-02-03T01:05:59+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/docker/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/docker/</loc>
     <lastmod>2018-02-22T16:41:22+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/go/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/go/</loc>
     <lastmod>2018-02-17T11:49:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/golang/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/golang/</loc>
     <lastmod>2018-02-17T11:49:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/http/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/http/</loc>
     <lastmod>2018-02-17T11:49:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/json/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/json/</loc>
     <lastmod>2018-02-17T11:49:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/open-source/</loc>
-    <lastmod>2018-05-04T19:53:58+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.viveksyngh.info/blog/categories/openfaas/</loc>
-    <lastmod>2018-05-04T19:53:58+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.viveksyngh.info/blog/categories/python2/</loc>
-    <lastmod>2018-02-03T01:05:59+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.viveksyngh.info/blog/categories/python3/</loc>
-    <lastmod>2018-02-03T01:05:59+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.viveksyngh.info/blog/categories/server/</loc>
-    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.viveksyngh.info/blog/categories/serverless/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/openfaas/</loc>
     <lastmod>2018-02-22T16:41:22+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/swarm/</loc>
-    <lastmod>2018-02-22T16:41:22+05:30</lastmod>
+    <loc>https://www.viveksyngh.info/blog/categories/python2/</loc>
+    <lastmod>2018-02-03T01:05:59+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/tags/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/python3/</loc>
+    <lastmod>2018-02-03T01:05:59+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/template/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/server/</loc>
     <lastmod>2018-02-17T11:49:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/ubuntu/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/serverless/</loc>
+    <lastmod>2018-02-22T16:41:22+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.viveksyngh.info/blog/categories/swarm/</loc>
+    <lastmod>2018-02-22T16:41:22+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.viveksyngh.info/blog/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.viveksyngh.info/blog/categories/template/</loc>
+    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.viveksyngh.info/blog/categories/ubuntu/</loc>
     <lastmod>2018-02-21T12:17:47+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/categories/urllib/</loc>
+    <loc>https://www.viveksyngh.info/blog/categories/urllib/</loc>
     <lastmod>2018-02-03T01:05:59+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viveksyngh.info/blog/</loc>
-    <lastmod>2018-05-04T19:53:58+05:30</lastmod>
+    <loc>https://www.viveksyngh.info/blog/</loc>
+    <lastmod>2018-02-22T16:41:22+05:30</lastmod>
     <priority>0</priority>
   </url>
   

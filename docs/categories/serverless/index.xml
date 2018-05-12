@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Serverless on Vivek Kumar Singh</title>
-    <link>http://www.viveksyngh.info/blog/categories/serverless/</link>
+    <link>https://www.viveksyngh.info/blog/categories/serverless/</link>
     <description>Recent content in Serverless on Vivek Kumar Singh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Feb 2018 16:41:22 +0530</lastBuildDate>
     
-	<atom:link href="http://www.viveksyngh.info/blog/categories/serverless/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.viveksyngh.info/blog/categories/serverless/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Deploying OpenFaas on Docker Swarm</title>
-      <link>http://www.viveksyngh.info/blog/getting-started-with-openfaas/</link>
+      <link>https://www.viveksyngh.info/blog/getting-started-with-openfaas/</link>
       <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/getting-started-with-openfaas/</guid>
+      <guid>https://www.viveksyngh.info/blog/getting-started-with-openfaas/</guid>
       <description>In this blog post, I am going to talk about how to deploy OpenFaas on Docker Swarm. OpenFaaS (Functions as a Service) is a framework for building serverless functions with Docker and Kubernetes. To know more about OpenFaas visit this link.
 I have already setup a two node Docker Swarm cluster running on cloud service provider Civo. OpenFaas repository contains a script deploy_stack.sh which can be used to deploy OpenFaas stack.</description>
     </item>

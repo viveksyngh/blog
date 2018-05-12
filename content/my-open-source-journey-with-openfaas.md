@@ -3,6 +3,7 @@ title: "My Open Source Journey With OpenFaaS"
 date: 2018-05-04T19:53:58+05:30
 categories: ["open source", "OpenFaaS",]
 author: "Vivek Singh"
+draft: true
 ---
 
 It all started in October 2017, I was actively looking for open source project to contribute when I came to know about [Hacktoberfest](https://hacktoberfest.digitalocean.com/). It is a month-long celebration of open source software organized by [Github](https://github.com/) and [Digital Ocean](https://www.digitalocean.com/). 
