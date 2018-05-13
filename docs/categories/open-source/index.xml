@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open Source on Vivek Kumar Singh</title>
-    <link>http://www.viveksyngh.info/blog/categories/open-source/</link>
+    <link>https://www.viveksyngh.info/blog/categories/open-source/</link>
     <description>Recent content in Open Source on Vivek Kumar Singh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 04 May 2018 19:53:58 +0530</lastBuildDate>
     
-	<atom:link href="http://www.viveksyngh.info/blog/categories/open-source/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.viveksyngh.info/blog/categories/open-source/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My Open Source Journey With OpenFaaS</title>
-      <link>http://www.viveksyngh.info/blog/my-open-source-journey-with-openfaas/</link>
+      <link>https://www.viveksyngh.info/blog/my-open-source-journey-with-openfaas/</link>
       <pubDate>Fri, 04 May 2018 19:53:58 +0530</pubDate>
       
-      <guid>http://www.viveksyngh.info/blog/my-open-source-journey-with-openfaas/</guid>
+      <guid>https://www.viveksyngh.info/blog/my-open-source-journey-with-openfaas/</guid>
       <description>It all started in October 2017, I was actively looking for open source project to contribute when I came to know about Hacktoberfest. It is a month-long celebration of open source software organized by Github and Digital Ocean.
 While browsing through the Hacktoberfest listed issues, I found an open issue from OpenFaaS. OpenFaaS project is written in Golang. Back then I knew python and had started learning Golang. I thought to give it a try.</description>
     </item>
