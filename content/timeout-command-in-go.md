@@ -1,5 +1,5 @@
 ---
-title: "Timeout Command in Go"
+title: "Timeout Commands in Go"
 date: 2018-08-28T16:47:16+05:30
 categories: ["golang", "exec", "timeout", "process"]
 author: "Vivek Singh"
