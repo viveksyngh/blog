@@ -6,10 +6,20 @@
     <description>Recent content on Vivek Kumar Singh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 May 2018 19:53:58 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 28 Aug 2018 16:47:16 +0530</lastBuildDate>
     
 	<atom:link href="https://www.viveksyngh.info/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Timeout Command in Go</title>
+      <link>https://www.viveksyngh.info/blog/timeout-command-in-go/</link>
+      <pubDate>Tue, 28 Aug 2018 16:47:16 +0530</pubDate>
+      
+      <guid>https://www.viveksyngh.info/blog/timeout-command-in-go/</guid>
+      <description>Sometimes in our applications, we need to invoke external processes or commands (e.g CURL, Ping, SSH etc.) to perform some tasks. We can use os/exec Go package to invoke external processes. Most of the time we want to invoke these commands with timeouts. In this blog post, I am going to talk about the different ways in which we can invoke a command with a timeout.
+Timeout with timer In this method, we will use a timer for the timeout.</description>
+    </item>
     
     <item>
       <title>My Open Source Journey With OpenFaaS</title>

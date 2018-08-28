@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.viveksyngh.info/blog/timeout-command-in-go/</loc>
+    <lastmod>2018-08-28T16:47:16+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.viveksyngh.info/blog/my-open-source-journey-with-openfaas/</loc>
     <lastmod>2018-05-04T19:53:58+05:30</lastmod>
   </url>
@@ -44,6 +49,12 @@
   </url>
   
   <url>
+    <loc>https://www.viveksyngh.info/blog/categories/exec/</loc>
+    <lastmod>2018-08-28T16:47:16+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.viveksyngh.info/blog/categories/go/</loc>
     <lastmod>2018-02-17T11:49:41+05:30</lastmod>
     <priority>0</priority>
@@ -51,7 +62,7 @@
   
   <url>
     <loc>https://www.viveksyngh.info/blog/categories/golang/</loc>
-    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
+    <lastmod>2018-08-28T16:47:16+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -76,6 +87,12 @@
   <url>
     <loc>https://www.viveksyngh.info/blog/categories/openfaas/</loc>
     <lastmod>2018-05-04T19:53:58+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.viveksyngh.info/blog/categories/process/</loc>
+    <lastmod>2018-08-28T16:47:16+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -121,6 +138,12 @@
   </url>
   
   <url>
+    <loc>https://www.viveksyngh.info/blog/categories/timeout/</loc>
+    <lastmod>2018-08-28T16:47:16+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.viveksyngh.info/blog/categories/ubuntu/</loc>
     <lastmod>2018-02-21T12:17:47+05:30</lastmod>
     <priority>0</priority>
@@ -134,7 +157,7 @@
   
   <url>
     <loc>https://www.viveksyngh.info/blog/</loc>
-    <lastmod>2018-05-04T19:53:58+05:30</lastmod>
+    <lastmod>2018-08-28T16:47:16+05:30</lastmod>
     <priority>0</priority>
   </url>
   

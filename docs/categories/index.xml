@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>Exec</title>
+      <link>https://www.viveksyngh.info/blog/categories/exec/</link>
+      <pubDate>Tue, 28 Aug 2018 16:47:16 +0530</pubDate>
+      
+      <guid>https://www.viveksyngh.info/blog/categories/exec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Go</title>
       <link>https://www.viveksyngh.info/blog/categories/go/</link>
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
@@ -31,7 +40,7 @@
     <item>
       <title>Golang</title>
       <link>https://www.viveksyngh.info/blog/categories/golang/</link>
-      <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
+      <pubDate>Tue, 28 Aug 2018 16:47:16 +0530</pubDate>
       
       <guid>https://www.viveksyngh.info/blog/categories/golang/</guid>
       <description></description>
@@ -70,6 +79,15 @@
       <pubDate>Fri, 04 May 2018 19:53:58 +0530</pubDate>
       
       <guid>https://www.viveksyngh.info/blog/categories/openfaas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Process</title>
+      <link>https://www.viveksyngh.info/blog/categories/process/</link>
+      <pubDate>Tue, 28 Aug 2018 16:47:16 +0530</pubDate>
+      
+      <guid>https://www.viveksyngh.info/blog/categories/process/</guid>
       <description></description>
     </item>
     
@@ -124,6 +142,15 @@
       <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
       
       <guid>https://www.viveksyngh.info/blog/categories/template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Timeout</title>
+      <link>https://www.viveksyngh.info/blog/categories/timeout/</link>
+      <pubDate>Tue, 28 Aug 2018 16:47:16 +0530</pubDate>
+      
+      <guid>https://www.viveksyngh.info/blog/categories/timeout/</guid>
       <description></description>
     </item>
     
