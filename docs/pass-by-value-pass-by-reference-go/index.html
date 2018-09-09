@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass by value and Pass by reference in Go &middot; Vivek Kumar Singh</title>
+
+    <meta name="description" content="">
+
+    <meta name="generator" content="Hugo 0.32.2" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="true" />
+    <meta name="twitter:title" content="Pass by value and Pass by reference in Go &middot; Vivek Kumar Singh">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Pass by value and Pass by reference in Go &middot; Vivek Kumar Singh">
+    <meta property="og:description" content="">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href="https://www.viveksyngh.info/blog/css/all.min.css">
+    <link rel="stylesheet" href="https://www.viveksyngh.info/blog/css/custom.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Vivek Kumar Singh" href="https://www.viveksyngh.info/blog/index.xml" />
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <div class="avatar">
+          <img class="img-circle" src="https://www.viveksyngh.info/blog/img/avatar.png" alt="Responsive image">
+        </div>
+        <hgroup>
+            <h2 class="brand-title"><a href="https://www.viveksyngh.info/blog">Vivek Kumar Singh</a></h2>
+            <h4 class="brand-tagline"> Pythonista, Gopher, Rookie Data Scientist </h4>
+        </hgroup>
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/viveksyngh">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/viveksyngh">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/2798036">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/viveksyngh">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">10 Sep 2018, 01:04</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://www.viveksyngh.info/blog/pass-by-value-pass-by-reference-go/" class="post-title">Pass by value and Pass by reference in Go</a>
+
+                        <p class="post-meta">
+                            
+                                By <strong class="post-author">Vivek Singh</strong>
+                            
+                            
+                                under
+                                
+                                <a class="post-category post-category-go" href="https://www.viveksyngh.info/blog/categories/go">go</a><a class="post-category post-category-golang" href="https://www.viveksyngh.info/blog/categories/golang">golang</a><a class="post-category post-category-programming" href="https://www.viveksyngh.info/blog/categories/programming">programming</a><a class="post-category post-category-structs" href="https://www.viveksyngh.info/blog/categories/structs">structs</a><a class="post-category post-category-pointer" href="https://www.viveksyngh.info/blog/categories/pointer">pointer</a>
+                            
+                        </p>
+                    </header>
+                    
+                    <div class="post-description">
+                        
+
+<p>In Go, everything is passed by value. When we pass arguments to a function, a function always gets the copy of the data passed. For example, passing an int value to function makes a copy of the int, passing a pointer value makes a copy of the pointer but not the data it points to.</p>
+
+<p>When we pass a value to function it is called pass by value and when we pass a pointer to a function it is called pass by reference.</p>
+
+<p>In this blog post, we will see when and how to pass by value or pass by reference.</p>
+
+<h2 id="pass-by-value">Pass by value</h2>
+
+<p>By default, everything in Go is passed by value. The function receives the copy of data passed and any changes in the called function will not be reflected in caller function. If you want to make your data immutable (changes that function made to it will not be visible by calling code)</p>
+
+<script src="https://gist.github.com/viveksyngh/ed0dda46cd63847b448b84c44f9443e8.js"></script>
+
+<p>If you run the above code, you will get the following output.</p>
+
+<pre><code>&quot;a&quot; value before calling &quot;add1&quot; : 10
+&quot;a&quot; value after calling &quot;add1&quot; : 10
+Person's age before birthday : 30
+Person's age after birthday : 30
+</code></pre>
+
+<p>As we can see in the above example, when we pass by value changes applied in the called function is not visible to calling code. This means called function is getting a copy of the data.</p>
+
+<h2 id="pass-by-reference">Pass by reference</h2>
+
+<p>To pass anything by reference in Go, we make use of <code>&amp;</code> and <code>*</code> operator. <code>&amp;</code> is address of operator which gives memory address of a variable when applied in front of it.</p>
+
+<pre><code class="language-go">var a := &amp;i
+</code></pre>
+
+<p><code>*</code>is an operator which is used in conjunction with <code>&amp;</code> operator and returns the value stored at the pointer. It goes in front of a variable which holds a memory address and gets the value pointer was pointing to.</p>
+
+<pre><code class="language-go">var b := *a
+</code></pre>
+
+<script src="https://gist.github.com/viveksyngh/659011dbd48e1f787ad394fccf05fe15.js"></script>
+
+<p>If you run the above code, you will get the following output.</p>
+
+<pre><code>&quot;a&quot; value before calling &quot;add1&quot; : 10
+&quot;a&quot; value after calling &quot;add1&quot; : 11
+Person's age before birthday : 30
+Person's age after birthday : 31
+</code></pre>
+
+<p>As we can see in the example when we pass the reference changes applied in a called function will be visible in calling code.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>As we write Go code, we can ask ourself whether to pass by value or pass by reference.</p>
+
+<p>As we have already seen, passing values is a great way to make our data immutable. Sometimes this is all you need but not more often. If you are not sure whether you want to get updated value in the calling code or not, use pass by reference.</p>
+
+<p>In the case of a struct, if we pass by value it needs to create the copy of the struct every time. Consider the cost involved in creating the copy of a complex structure. If you have a complex structure it is recommended to pass by reference.</p>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "viveksynghblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="https://www.viveksyngh.info/blog/js/all.min.js"></script>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113545356-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

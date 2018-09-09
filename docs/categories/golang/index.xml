@@ -6,10 +6,20 @@
     <description>Recent content in Golang on Vivek Kumar Singh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Aug 2018 16:47:16 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 10 Sep 2018 01:04:17 +0530</lastBuildDate>
     
 	<atom:link href="https://www.viveksyngh.info/blog/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pass by value and Pass by reference in Go</title>
+      <link>https://www.viveksyngh.info/blog/pass-by-value-pass-by-reference-go/</link>
+      <pubDate>Mon, 10 Sep 2018 01:04:17 +0530</pubDate>
+      
+      <guid>https://www.viveksyngh.info/blog/pass-by-value-pass-by-reference-go/</guid>
+      <description>In Go, everything is passed by value. When we pass arguments to a function, a function always gets the copy of the data passed. For example, passing an int value to function makes a copy of the int, passing a pointer value makes a copy of the pointer but not the data it points to.
+When we pass a value to function it is called pass by value and when we pass a pointer to a function it is called pass by reference.</description>
+    </item>
     
     <item>
       <title>Timeout Commands in Go</title>

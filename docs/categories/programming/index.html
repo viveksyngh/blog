@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go &middot; Vivek Kumar Singh</title>
+    <title>Programming &middot; Vivek Kumar Singh</title>
 
     <meta name="description" content="Pythonista, Gopher, Rookie Data Scientist">
 
     <meta name="generator" content="Hugo 0.32.2" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="true" />
-    <meta name="twitter:title" content="Go &middot; Vivek Kumar Singh">
+    <meta name="twitter:title" content="Programming &middot; Vivek Kumar Singh">
     <meta name="twitter:description" content="Pythonista, Gopher, Rookie Data Scientist">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Go &middot; Vivek Kumar Singh">
+    <meta property="og:title" content="Programming &middot; Vivek Kumar Singh">
     <meta property="og:description" content="Pythonista, Gopher, Rookie Data Scientist">
 
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
@@ -156,217 +156,6 @@ Person's age after birthday : 31
 <p>As we have already seen, passing values is a great way to make our data immutable. Sometimes this is all you need but not more often. If you are not sure whether you want to get updated value in the calling code or not, use pass by reference.</p>
 
 <p>In the case of a struct, if we pass by value it needs to create the copy of the struct every time. Consider the cost involved in creating the copy of a complex structure. If you have a complex structure it is recommended to pass by reference.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">17 Feb 2018, 11:49</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="https://www.viveksyngh.info/blog/http-response-in-go/" class="post-title">Http Response in Golang</a>
-
-                        <p class="post-meta">
-                            
-                                By <strong class="post-author">Vivek Singh</strong>
-                            
-                            
-                                under 
-                                
-                                <a class="post-category post-category-golang" href="https://www.viveksyngh.info/blog/categories/golang">golang</a><a class="post-category post-category-go" href="https://www.viveksyngh.info/blog/categories/go">go</a><a class="post-category post-category-http" href="https://www.viveksyngh.info/blog/categories/http">http</a><a class="post-category post-category-server" href="https://www.viveksyngh.info/blog/categories/server">server</a><a class="post-category post-category-template" href="https://www.viveksyngh.info/blog/categories/template">template</a><a class="post-category post-category-json" href="https://www.viveksyngh.info/blog/categories/json">json</a>
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>In this blog post, I am going to talk about HTTP server and how to respond with different types of HTTP response(text, JSON, template) in Go.</p>
-
-<p>Creating a web server in Go is very simple and we can do it by writing just a few lines of code. To create an HTTP server in go you need to use <code>net/http</code> package. This is how a simple HTTP server code looks like in Go.</p>
-
-<p><code>server.go</code></p>
-
-<pre><code class="language-go">package main
-
-import (
-	&quot;fmt&quot;
-	&quot;net/http&quot;
-)
-
-func main() {
-	http.HandleFunc(&quot;/&quot;, handler)
-	http.ListenAndServe(&quot;:8081&quot;, nil)
-}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, &quot;Hello World&quot;)
-}
-</code></pre>
-
-<p>Once you run the file with command <code>go run server.go</code>, you will have a web server listening on port <code>8081</code>. Open a browser and access <code>http://localhost:8081/</code> you will get plain text response as <code>Hello world</code>. Above web server is very simple and it will respond with <code>Hello word</code> no matter what path you type after <code>/</code>.</p>
-
-<p>Nowadays most of the web services use JSON to communicate with clients and this one web service can be used for different clients like Web Application, Android Application or iOs Application. Now we will see how to return a JSON response in Go.</p>
-
-<p>At first, I will create <code>User</code> struct which will store user information. We will use the same struct to return user information as JSON response.</p>
-
-<pre><code class="language-go">
-type User struct  {
-	Id int       `json:&quot;id&quot;`
-	Name string  `json:&quot;name&quot;`
-	Email string `json:&quot;email&quot;`
-	Phone string `json:&quot;phone&quot;`
-}
-
-</code></pre>
-
-<p>Let&rsquo;s create a handler name <code>jsonHandler</code> which will handle <code>/json</code> and return user information as JSON response.</p>
-
-<p>To send JSON response, we need to encode the user information using JSON encoder and set the response header <code>Content-Type</code> to <code>application/json</code> while sending the response.</p>
-
-<pre><code class="language-go">func jsonHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
-	user := User{Id: 1,
-				Name: &quot;John Doe&quot;,
-				Email: &quot;johndoe@gmail.com&quot;,
-				Phone: &quot;000099999&quot;}
-	json.NewEncoder(w).Encode(user)
-}
-</code></pre>
-
-<p>Now <code>server.go</code> file should look as below</p>
-
-<pre><code class="language-go">package main
-
-import (
-	&quot;fmt&quot;
-	&quot;net/http&quot;
-	&quot;encoding/json&quot;
-)
-
-type User struct  {
-	Id int       `json:&quot;id&quot;`
-	Name string  `json:&quot;name&quot;`
-	Email string `json:&quot;email&quot;`
-	Phone string `json:&quot;phone&quot;`
-}
-
-func main() {
-	http.HandleFunc(&quot;/&quot;, handler)
-	http.HandleFunc(&quot;/json&quot;, jsonHandler)
-	http.ListenAndServe(&quot;:8081&quot;, nil)
-}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, &quot;Hello World&quot;)
-}
-
-
-func jsonHandler(w http.ResponseWriter, r *http.Request) {
-  w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
-	user := User{Id: 1,
-				Name: &quot;John Doe&quot;,
-				Email: &quot;johndoe@gmail.com&quot;,
-				Phone: &quot;000099999&quot;}
-	json.NewEncoder(w).Encode(user)
-}
-</code></pre>
-
-<p>Run this file and access <code>http://localhost:8081/json</code> in browser, you should get a json response as below</p>
-
-<pre><code class="language-json">{
-  &quot;id&quot;: 1,
-  &quot;name&quot;: &quot;John Doe&quot;,
-  &quot;email&quot;: &quot;johndoe@gmail.com&quot;,
-  &quot;phone&quot;: &quot;000099999&quot;
-}
-</code></pre>
-
-<p>Now We will add a new handler <code>templateHandler</code> which will handle <code>/template</code> and respond with HTML file (template) as a response.
-Let&rsquo;s create a template file as <code>template.html</code> which will display user information and will be used by <code>templateHandler</code>.</p>
-
-<pre><code class="language-html">&lt;html&gt;
-    &lt;head&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h3&gt;Name : {{.Name}}&lt;/h3&gt;
-        &lt;h3&gt;Email : {{.Email}}&lt;/h3&gt;
-        &lt;h3&gt;Phone : {{.Phone}}&lt;/h3&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<p>New handler will use <code>html/template</code> package to parse and execute template files. Also, we need to set <code>Content-Type</code> header to <code>text/html; charset=utf-8</code> otherwise template will be returned as plain text.</p>
-
-<pre><code class="language-go">func templateHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set(&quot;Content-Type&quot;, &quot;text/html; charset=utf-8&quot;)
-	t, err := template.ParseFiles(&quot;template.html&quot;)
-	if err != nil {
-		fmt.Fprintf(w, &quot;Unable to load template&quot;)
-	}
-
-	user := User{Id: 1,
-		Name: &quot;John Doe&quot;,
-		Email: &quot;johndoe@gmail.com&quot;,
-		Phone: &quot;000099999&quot;}
-	t.Execute(w, user)
-}
-</code></pre>
-
-<p>After adding new handler, <code>server.go</code> file should look as below</p>
-
-<pre><code class="language-go">package main
-
-import (
-	&quot;fmt&quot;
-	&quot;net/http&quot;
-	&quot;encoding/json&quot;
-	&quot;html/template&quot;
-)
-
-type User struct  {
-	Id int       `json:&quot;id&quot;`
-	Name string	 `json:&quot;name&quot;`
-	Email string `json:&quot;email&quot;`
-	Phone string `json:&quot;phone&quot;`
-}
-
-func main() {
-	http.HandleFunc(&quot;/&quot;, handler)
-	http.HandleFunc(&quot;/json&quot;, jsonHandler)
-	http.HandleFunc(&quot;/template&quot;, templateHandler)
-	http.ListenAndServe(&quot;:8081&quot;, nil)
-}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, &quot;Hello World&quot;)
-}
-
-
-func jsonHandler(w http.ResponseWriter, r *http.Request) {
-	user := User{Id: 1,
-				Name: &quot;John Doe&quot;,
-				Email: &quot;johndoe@gmail.com&quot;,
-				Phone: &quot;000099999&quot;}
-	json.NewEncoder(w).Encode(user)
-}
-
-func templateHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set(&quot;Content-Type&quot;, &quot;text/html; charset=utf-8&quot;)
-	t, err := template.ParseFiles(&quot;template.html&quot;)
-	if err != nil {
-		fmt.Fprintf(w, &quot;Unable to load template&quot;)
-	}
-
-	user := User{Id: 1,
-		Name: &quot;John Doe&quot;,
-		Email: &quot;johndoe@gmail.com&quot;,
-		Phone: &quot;000099999&quot;}
-	t.Execute(w, user)
-}
-</code></pre>
-
-<p>Once you run this file and access <code>http://localhost:8081/template</code> in the browser, you should be able to see user details rendered with the template.</p>
-
-<p>All code snippets for this blog post can be found <a href="https://gist.github.com/viveksyngh/b78f78556532df0a72c4b1182bc68101">here</a>.</p>
 
                     </div>
                 </section>

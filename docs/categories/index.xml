@@ -31,7 +31,7 @@
     <item>
       <title>Go</title>
       <link>https://www.viveksyngh.info/blog/categories/go/</link>
-      <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
+      <pubDate>Mon, 10 Sep 2018 01:04:17 +0530</pubDate>
       
       <guid>https://www.viveksyngh.info/blog/categories/go/</guid>
       <description></description>
@@ -40,7 +40,7 @@
     <item>
       <title>Golang</title>
       <link>https://www.viveksyngh.info/blog/categories/golang/</link>
-      <pubDate>Tue, 28 Aug 2018 16:47:16 +0530</pubDate>
+      <pubDate>Mon, 10 Sep 2018 01:04:17 +0530</pubDate>
       
       <guid>https://www.viveksyngh.info/blog/categories/golang/</guid>
       <description></description>
@@ -83,11 +83,29 @@
     </item>
     
     <item>
+      <title>Pointer</title>
+      <link>https://www.viveksyngh.info/blog/categories/pointer/</link>
+      <pubDate>Mon, 10 Sep 2018 01:04:17 +0530</pubDate>
+      
+      <guid>https://www.viveksyngh.info/blog/categories/pointer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Process</title>
       <link>https://www.viveksyngh.info/blog/categories/process/</link>
       <pubDate>Tue, 28 Aug 2018 16:47:16 +0530</pubDate>
       
       <guid>https://www.viveksyngh.info/blog/categories/process/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://www.viveksyngh.info/blog/categories/programming/</link>
+      <pubDate>Mon, 10 Sep 2018 01:04:17 +0530</pubDate>
+      
+      <guid>https://www.viveksyngh.info/blog/categories/programming/</guid>
       <description></description>
     </item>
     
@@ -124,6 +142,15 @@
       <pubDate>Thu, 22 Feb 2018 16:41:22 +0530</pubDate>
       
       <guid>https://www.viveksyngh.info/blog/categories/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Structs</title>
+      <link>https://www.viveksyngh.info/blog/categories/structs/</link>
+      <pubDate>Mon, 10 Sep 2018 01:04:17 +0530</pubDate>
+      
+      <guid>https://www.viveksyngh.info/blog/categories/structs/</guid>
       <description></description>
     </item>
     

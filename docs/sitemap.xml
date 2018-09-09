@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.viveksyngh.info/blog/pass-by-value-pass-by-reference-go/</loc>
+    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.viveksyngh.info/blog/timeout-command-in-go/</loc>
     <lastmod>2018-08-28T16:47:16+05:30</lastmod>
   </url>
@@ -56,13 +61,13 @@
   
   <url>
     <loc>https://www.viveksyngh.info/blog/categories/go/</loc>
-    <lastmod>2018-02-17T11:49:41+05:30</lastmod>
+    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.viveksyngh.info/blog/categories/golang/</loc>
-    <lastmod>2018-08-28T16:47:16+05:30</lastmod>
+    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -91,8 +96,20 @@
   </url>
   
   <url>
+    <loc>https://www.viveksyngh.info/blog/categories/pointer/</loc>
+    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.viveksyngh.info/blog/categories/process/</loc>
     <lastmod>2018-08-28T16:47:16+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.viveksyngh.info/blog/categories/programming/</loc>
+    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -117,6 +134,12 @@
   <url>
     <loc>https://www.viveksyngh.info/blog/categories/serverless/</loc>
     <lastmod>2018-02-22T16:41:22+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.viveksyngh.info/blog/categories/structs/</loc>
+    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,7 +180,7 @@
   
   <url>
     <loc>https://www.viveksyngh.info/blog/</loc>
-    <lastmod>2018-08-28T16:47:16+05:30</lastmod>
+    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
     <priority>0</priority>
   </url>
   

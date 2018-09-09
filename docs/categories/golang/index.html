@@ -82,6 +82,84 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">10 Sep 2018, 01:04</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://www.viveksyngh.info/blog/pass-by-value-pass-by-reference-go/" class="post-title">Pass by value and Pass by reference in Go</a>
+
+                        <p class="post-meta">
+                            
+                                By <strong class="post-author">Vivek Singh</strong>
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-go" href="https://www.viveksyngh.info/blog/categories/go">go</a><a class="post-category post-category-golang" href="https://www.viveksyngh.info/blog/categories/golang">golang</a><a class="post-category post-category-programming" href="https://www.viveksyngh.info/blog/categories/programming">programming</a><a class="post-category post-category-structs" href="https://www.viveksyngh.info/blog/categories/structs">structs</a><a class="post-category post-category-pointer" href="https://www.viveksyngh.info/blog/categories/pointer">pointer</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>In Go, everything is passed by value. When we pass arguments to a function, a function always gets the copy of the data passed. For example, passing an int value to function makes a copy of the int, passing a pointer value makes a copy of the pointer but not the data it points to.</p>
+
+<p>When we pass a value to function it is called pass by value and when we pass a pointer to a function it is called pass by reference.</p>
+
+<p>In this blog post, we will see when and how to pass by value or pass by reference.</p>
+
+<h2 id="pass-by-value">Pass by value</h2>
+
+<p>By default, everything in Go is passed by value. The function receives the copy of data passed and any changes in the called function will not be reflected in caller function. If you want to make your data immutable (changes that function made to it will not be visible by calling code)</p>
+
+<script src="https://gist.github.com/viveksyngh/ed0dda46cd63847b448b84c44f9443e8.js"></script>
+
+<p>If you run the above code, you will get the following output.</p>
+
+<pre><code>&quot;a&quot; value before calling &quot;add1&quot; : 10
+&quot;a&quot; value after calling &quot;add1&quot; : 10
+Person's age before birthday : 30
+Person's age after birthday : 30
+</code></pre>
+
+<p>As we can see in the above example, when we pass by value changes applied in the called function is not visible to calling code. This means called function is getting a copy of the data.</p>
+
+<h2 id="pass-by-reference">Pass by reference</h2>
+
+<p>To pass anything by reference in Go, we make use of <code>&amp;</code> and <code>*</code> operator. <code>&amp;</code> is address of operator which gives memory address of a variable when applied in front of it.</p>
+
+<pre><code class="language-go">var a := &amp;i
+</code></pre>
+
+<p><code>*</code>is an operator which is used in conjunction with <code>&amp;</code> operator and returns the value stored at the pointer. It goes in front of a variable which holds a memory address and gets the value pointer was pointing to.</p>
+
+<pre><code class="language-go">var b := *a
+</code></pre>
+
+<script src="https://gist.github.com/viveksyngh/659011dbd48e1f787ad394fccf05fe15.js"></script>
+
+<p>If you run the above code, you will get the following output.</p>
+
+<pre><code>&quot;a&quot; value before calling &quot;add1&quot; : 10
+&quot;a&quot; value after calling &quot;add1&quot; : 11
+Person's age before birthday : 30
+Person's age after birthday : 31
+</code></pre>
+
+<p>As we can see in the example when we pass the reference changes applied in a called function will be visible in calling code.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>As we write Go code, we can ask ourself whether to pass by value or pass by reference.</p>
+
+<p>As we have already seen, passing values is a great way to make our data immutable. Sometimes this is all you need but not more often. If you are not sure whether you want to get updated value in the calling code or not, use pass by reference.</p>
+
+<p>In the case of a struct, if we pass by value it needs to create the copy of the struct every time. Consider the cost involved in creating the copy of a complex structure. If you have a complex structure it is recommended to pass by reference.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">28 Aug 2018, 16:47</h1>
                 <section class="post">
                     <header class="post-header">

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on Vivek Kumar Singh</title>
-    <link>https://www.viveksyngh.info/blog/categories/go/</link>
-    <description>Recent content in Go on Vivek Kumar Singh</description>
+    <title>Structs on Vivek Kumar Singh</title>
+    <link>https://www.viveksyngh.info/blog/categories/structs/</link>
+    <description>Recent content in Structs on Vivek Kumar Singh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 10 Sep 2018 01:04:17 +0530</lastBuildDate>
     
-	<atom:link href="https://www.viveksyngh.info/blog/categories/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.viveksyngh.info/blog/categories/structs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>https://www.viveksyngh.info/blog/pass-by-value-pass-by-reference-go/</guid>
       <description>In Go, everything is passed by value. When we pass arguments to a function, a function always gets the copy of the data passed. For example, passing an int value to function makes a copy of the int, passing a pointer value makes a copy of the pointer but not the data it points to.
 When we pass a value to function it is called pass by value and when we pass a pointer to a function it is called pass by reference.</description>
-    </item>
-    
-    <item>
-      <title>Http Response in Golang</title>
-      <link>https://www.viveksyngh.info/blog/http-response-in-go/</link>
-      <pubDate>Sat, 17 Feb 2018 11:49:41 +0530</pubDate>
-      
-      <guid>https://www.viveksyngh.info/blog/http-response-in-go/</guid>
-      <description>In this blog post, I am going to talk about HTTP server and how to respond with different types of HTTP response(text, JSON, template) in Go.
-Creating a web server in Go is very simple and we can do it by writing just a few lines of code. To create an HTTP server in go you need to use net/http package. This is how a simple HTTP server code looks like in Go.</description>
     </item>
     
   </channel>
