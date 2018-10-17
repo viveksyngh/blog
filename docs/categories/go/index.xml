@@ -6,10 +6,20 @@
     <description>Recent content in Go on Vivek Kumar Singh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Sep 2018 01:04:17 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 17 Oct 2018 23:55:32 +0530</lastBuildDate>
     
 	<atom:link href="https://www.viveksyngh.info/blog/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting started with Golang interfaces</title>
+      <link>https://www.viveksyngh.info/blog/getting-started-with-golang-interfaces/</link>
+      <pubDate>Wed, 17 Oct 2018 23:55:32 +0530</pubDate>
+      
+      <guid>https://www.viveksyngh.info/blog/getting-started-with-golang-interfaces/</guid>
+      <description>Interfaces in Go provides a way to specify the behavior of an object. Interfaces allow us to write more flexible and scalable code in Go. It is also a mechanism to achieve polymorphism in Go.
+type Interface interface { Method1(int, string) (int, error) Method2(int) bool Method3(string) }  Interfaces specify methods (or behavior) but do not provide an implementation for those methods. Types implementing the interface provide an implementation of methods.</description>
+    </item>
     
     <item>
       <title>Pass by value and Pass by reference in Go</title>

@@ -82,6 +82,238 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">17 Oct 2018, 23:55</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://www.viveksyngh.info/blog/getting-started-with-golang-interfaces/" class="post-title">Getting started with Golang interfaces</a>
+
+                        <p class="post-meta">
+                            
+                                By <strong class="post-author">Vivek Singh</strong>
+                            
+                            
+                                under 
+                                
+                                <a class="post-category post-category-go" href="https://www.viveksyngh.info/blog/categories/go">go</a><a class="post-category post-category-golang" href="https://www.viveksyngh.info/blog/categories/golang">golang</a><a class="post-category post-category-interface" href="https://www.viveksyngh.info/blog/categories/interface">interface</a><a class="post-category post-category-oops" href="https://www.viveksyngh.info/blog/categories/oops">oops</a>
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>Interfaces in Go provides a way to specify the behavior of an object. Interfaces allow us to write more flexible and scalable code in Go. It is also a mechanism to achieve polymorphism in Go.</p>
+
+<pre><code class="language-go">type Interface interface {
+     Method1(int, string) (int, error)
+     Method2(int) bool
+     Method3(string)
+}
+</code></pre>
+
+<p>Interfaces specify methods (or behavior) but do not provide an implementation for those methods. Types implementing the interface provide an implementation of methods.</p>
+
+<h2 id="composition-of-interfaces">Composition of Interfaces</h2>
+
+<p>Interfaces can embed methods from another interface. It embeds all exported (name starting with capital case) and non-exported (name starts with small case) methods from other interfaces.</p>
+
+<pre><code class="language-go">type Interface1 interface {
+    Method1(int, string) (int, error)
+    method2(int) bool
+    method3(string)
+}
+type Interface2 interface {
+    Method4(int, string) (int, error)
+    Method5(string)
+    Interface1         //Embedding Interface1 
+}
+</code></pre>
+
+<p>Here, <code>Interface2</code> will have <code>Method1</code>, <code>method2</code> and <code>method3</code> along with <code>Method4</code> and <code>Method5</code>.
+If an interface Y embed another interface Z, if Y is embedded by X then all methods of Z is also embedded into X.</p>
+
+<pre><code class="language-go">type I1 interface {
+   Method1(int, string) (int, error)
+   I2
+}
+
+type I2 interface {
+   Method2(int, string) (int, error)
+   I3
+}
+type I3 interface {
+    Method3(int, string) (int, error)
+}
+</code></pre>
+
+<p>In the above example, interface <code>I1</code> will have three methods <code>Method1</code>, <code>Method2</code> and <code>Method3</code>.</p>
+
+<p>Circular embedding of interfaces gets detected by the Go compiler and an error will be raised. Interface methods should also have unique names otherwise Go compiler will raise an error.</p>
+
+<h2 id="implementing-interfaces">Implementing Interfaces</h2>
+
+<p>Types implementing those interfaces need to provide an implementation for all methods (or behaviors) in the interface and should define methods with the desired names and signatures (Input and Output parameters).</p>
+
+<p>In Go, interfaces are implemented implicitly. We don’t need to specify that some types implement an interface. Go compiler automatically does that if the type defines all methods of an interface.</p>
+
+<pre><code class="language-go">type I interface {
+   M1(string) string
+   M2(string)
+}
+
+type T struct {}
+
+func (T) M1(str string) string {
+    return str
+}
+
+func (T) M2(str string) {
+    fmt.Println(str)
+}
+</code></pre>
+
+<p>A type can implement multiple interfaces.</p>
+
+<pre><code class="language-go">type Interface1 interface {
+    Method1(string) string
+    Method2(string)
+}
+type Interface2 interface {
+    Method3(string) string
+}
+
+type T struct {}
+
+func (T) Method1(str string) string {
+    return str
+}
+
+func (T) Method2(str string) {
+    fmt.Println(str)
+}
+
+func (T) Method3(str string) string {
+    
+    return str
+}
+</code></pre>
+
+<p>An interface can be implemented by multiple types.</p>
+
+<pre><code class="language-go">type Interface interface {
+    Method1(string) string
+}
+
+type T1 struct{}
+type T2 struct{}
+
+func (T1) Method1(str string) string {
+    return str
+}
+
+func (T2) Method1(str string) string {
+    return str
+}
+</code></pre>
+
+<p>If a Type implements an interface then that Type value can be used wherever we need to use interface value. What it means is, we can pass a value of Type implementing an interface if a function accepts a parameter of the type interface.</p>
+
+<pre><code class="language-go">type Interface interface {
+    Method(string) string
+}
+
+type T struct{}
+
+func (T) Method(str string) string {
+    return str
+}
+
+func f1(i Interface) {
+    fmt.Println(i.Method(&quot;Hello&quot;))
+}
+func main() {
+    f1(T{})
+}
+</code></pre>
+
+<p>An interface type can hold a value of any Type implementing the interface. When we call a method on the interface value then Go dynamically determines which Type method should be invoked based on the type of value it is holding.</p>
+
+<pre><code class="language-go">type Interface interface {
+    Method(str string)
+}
+type T1 struct{}
+type T2 struct{}
+
+func (T1) Method(str string) {
+    fmt.Println(str + &quot; from T1 Method&quot;)
+}
+func (T2) Method(str string) {
+    fmt.Println(str + &quot; from T2 Method&quot;)
+}
+func main() {
+    var i Interface
+    i = T1{}
+    i.Method(&quot;Hello&quot;) //invoke Method of T1
+    i = T2{}
+    i.Method(&quot;Hello&quot;) //invoke method of T2
+}
+</code></pre>
+
+<p>When we invoke <code>Method</code> on <code>i</code> it checks the type of value it’s holding and calls the corresponding implementation of the <code>Method</code>. Above code gives below output when we run it.</p>
+
+<pre><code class="language-shell">Hello from T1 Method
+Hello from T2 Method
+</code></pre>
+
+<p>An interface type value allows accessing only methods of interfaces. It hides methods of the exact type which value it holds.</p>
+
+<pre><code class="language-go">type Interface interface {
+    Method(str string)
+}
+
+type T1 struct{}
+
+func (T1) Method(str string) {
+   fmt.Println(str + &quot; from T1 Method&quot;)
+}
+func (T1) Method1(str string) {
+   fmt.Println(str + &quot; from Method1 of T1&quot;)
+}
+func main() {
+    var i Interface
+    i = T1{}
+    i.Method1(&quot;Hello&quot;) //throws an error
+}
+</code></pre>
+
+<p>when we will try to run above code Go compiler will throw an error saying</p>
+
+<pre><code class="language-shell">i.Method1 undefined (type Interface has no field or method Method1)
+</code></pre>
+
+<h2 id="empty-interface">Empty Interface</h2>
+
+<p>We can also have an interface which does not have any methods. We call empty interface. Empty interfaces are satisfiable by any type.</p>
+
+<pre><code class="language-go">type Interface interface {} //An empty interface
+
+type T struct{}
+
+func (T) Method(str string) {
+    fmt.Println(&quot; &quot; + &quot; from Method&quot;)
+}
+func main() {
+    var i Interface = T{}
+    _ = i
+}
+</code></pre>
+
+<p>Thanks for the read. If you find something wrong or would like to suggest something please leave a comment below.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">10 Sep 2018, 01:04</h1>
                 <section class="post">
                     <header class="post-header">
@@ -261,6 +493,23 @@ I recommend Hacktoberfest to anybody who wants to get started with Open Source C
 
 <p>If you interested in contributing to OpenFaas, read our getting started guide for contributors <a href="https://docs.openfaas.com/contributing/get-started/">here</a>.</p>
 
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">10 Apr 2018, 23:34</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://www.viveksyngh.info/blog/deploy-openfaas-on-kubernetes/" class="post-title">Deploy OpenFaas on Kubernetes</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
                     </div>
                 </section>
                 
@@ -867,6 +1116,18 @@ def download_file(url):
                 
             </div>
             
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 2</span>
+    
+      <a href="/blog/page/2/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
 
             <div class="footer">
     <div class="pure-menu pure-menu-horizontal pure-menu-open">

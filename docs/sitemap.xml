@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.viveksyngh.info/blog/getting-started-with-golang-interfaces/</loc>
+    <lastmod>2018-10-17T23:55:32+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.viveksyngh.info/blog/pass-by-value-pass-by-reference-go/</loc>
     <lastmod>2018-09-10T01:04:17+05:30</lastmod>
   </url>
@@ -15,6 +20,11 @@
   <url>
     <loc>https://www.viveksyngh.info/blog/my-open-source-journey-with-openfaas/</loc>
     <lastmod>2018-05-04T19:53:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.viveksyngh.info/blog/deploy-openfaas-on-kubernetes/</loc>
+    <lastmod>2018-04-10T23:34:58+05:30</lastmod>
   </url>
   
   <url>
@@ -43,6 +53,11 @@
   </url>
   
   <url>
+    <loc>https://www.viveksyngh.info/blog/hello-world/</loc>
+    <lastmod>2018-02-02T22:42:08+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.viveksyngh.info/blog/categories/</loc>
     <priority>0</priority>
   </url>
@@ -61,13 +76,13 @@
   
   <url>
     <loc>https://www.viveksyngh.info/blog/categories/go/</loc>
-    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
+    <lastmod>2018-10-17T23:55:32+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.viveksyngh.info/blog/categories/golang/</loc>
-    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
+    <lastmod>2018-10-17T23:55:32+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -78,8 +93,20 @@
   </url>
   
   <url>
+    <loc>https://www.viveksyngh.info/blog/categories/interface/</loc>
+    <lastmod>2018-10-17T23:55:32+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.viveksyngh.info/blog/categories/json/</loc>
     <lastmod>2018-02-17T11:49:41+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.viveksyngh.info/blog/categories/oops/</loc>
+    <lastmod>2018-10-17T23:55:32+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -180,7 +207,7 @@
   
   <url>
     <loc>https://www.viveksyngh.info/blog/</loc>
-    <lastmod>2018-09-10T01:04:17+05:30</lastmod>
+    <lastmod>2018-10-17T23:55:32+05:30</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting started with Golang interfaces &middot; Vivek Kumar Singh</title>
+
+    <meta name="description" content="">
+
+    <meta name="generator" content="Hugo 0.32.2" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="true" />
+    <meta name="twitter:title" content="Getting started with Golang interfaces &middot; Vivek Kumar Singh">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Getting started with Golang interfaces &middot; Vivek Kumar Singh">
+    <meta property="og:description" content="">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href="https://www.viveksyngh.info/blog/css/all.min.css">
+    <link rel="stylesheet" href="https://www.viveksyngh.info/blog/css/custom.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Vivek Kumar Singh" href="https://www.viveksyngh.info/blog/index.xml" />
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <div class="avatar">
+          <img class="img-circle" src="https://www.viveksyngh.info/blog/img/avatar.png" alt="Responsive image">
+        </div>
+        <hgroup>
+            <h2 class="brand-title"><a href="https://www.viveksyngh.info/blog">Vivek Kumar Singh</a></h2>
+            <h4 class="brand-tagline"> Pythonista, Gopher, Rookie Data Scientist </h4>
+        </hgroup>
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/viveksyngh">
+                        <i class="fa fa-twitter"></i> Twitter
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/viveksyngh">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/2798036">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/viveksyngh">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">17 Oct 2018, 23:55</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://www.viveksyngh.info/blog/getting-started-with-golang-interfaces/" class="post-title">Getting started with Golang interfaces</a>
+
+                        <p class="post-meta">
+                            
+                                By <strong class="post-author">Vivek Singh</strong>
+                            
+                            
+                                under
+                                
+                                <a class="post-category post-category-go" href="https://www.viveksyngh.info/blog/categories/go">go</a><a class="post-category post-category-golang" href="https://www.viveksyngh.info/blog/categories/golang">golang</a><a class="post-category post-category-interface" href="https://www.viveksyngh.info/blog/categories/interface">interface</a><a class="post-category post-category-oops" href="https://www.viveksyngh.info/blog/categories/oops">oops</a>
+                            
+                        </p>
+                    </header>
+                    
+                    <div class="post-description">
+                        
+
+<p>Interfaces in Go provides a way to specify the behavior of an object. Interfaces allow us to write more flexible and scalable code in Go. It is also a mechanism to achieve polymorphism in Go.</p>
+
+<pre><code class="language-go">type Interface interface {
+     Method1(int, string) (int, error)
+     Method2(int) bool
+     Method3(string)
+}
+</code></pre>
+
+<p>Interfaces specify methods (or behavior) but do not provide an implementation for those methods. Types implementing the interface provide an implementation of methods.</p>
+
+<h2 id="composition-of-interfaces">Composition of Interfaces</h2>
+
+<p>Interfaces can embed methods from another interface. It embeds all exported (name starting with capital case) and non-exported (name starts with small case) methods from other interfaces.</p>
+
+<pre><code class="language-go">type Interface1 interface {
+    Method1(int, string) (int, error)
+    method2(int) bool
+    method3(string)
+}
+type Interface2 interface {
+    Method4(int, string) (int, error)
+    Method5(string)
+    Interface1         //Embedding Interface1 
+}
+</code></pre>
+
+<p>Here, <code>Interface2</code> will have <code>Method1</code>, <code>method2</code> and <code>method3</code> along with <code>Method4</code> and <code>Method5</code>.
+If an interface Y embed another interface Z, if Y is embedded by X then all methods of Z is also embedded into X.</p>
+
+<pre><code class="language-go">type I1 interface {
+   Method1(int, string) (int, error)
+   I2
+}
+
+type I2 interface {
+   Method2(int, string) (int, error)
+   I3
+}
+type I3 interface {
+    Method3(int, string) (int, error)
+}
+</code></pre>
+
+<p>In the above example, interface <code>I1</code> will have three methods <code>Method1</code>, <code>Method2</code> and <code>Method3</code>.</p>
+
+<p>Circular embedding of interfaces gets detected by the Go compiler and an error will be raised. Interface methods should also have unique names otherwise Go compiler will raise an error.</p>
+
+<h2 id="implementing-interfaces">Implementing Interfaces</h2>
+
+<p>Types implementing those interfaces need to provide an implementation for all methods (or behaviors) in the interface and should define methods with the desired names and signatures (Input and Output parameters).</p>
+
+<p>In Go, interfaces are implemented implicitly. We don’t need to specify that some types implement an interface. Go compiler automatically does that if the type defines all methods of an interface.</p>
+
+<pre><code class="language-go">type I interface {
+   M1(string) string
+   M2(string)
+}
+
+type T struct {}
+
+func (T) M1(str string) string {
+    return str
+}
+
+func (T) M2(str string) {
+    fmt.Println(str)
+}
+</code></pre>
+
+<p>A type can implement multiple interfaces.</p>
+
+<pre><code class="language-go">type Interface1 interface {
+    Method1(string) string
+    Method2(string)
+}
+type Interface2 interface {
+    Method3(string) string
+}
+
+type T struct {}
+
+func (T) Method1(str string) string {
+    return str
+}
+
+func (T) Method2(str string) {
+    fmt.Println(str)
+}
+
+func (T) Method3(str string) string {
+    
+    return str
+}
+</code></pre>
+
+<p>An interface can be implemented by multiple types.</p>
+
+<pre><code class="language-go">type Interface interface {
+    Method1(string) string
+}
+
+type T1 struct{}
+type T2 struct{}
+
+func (T1) Method1(str string) string {
+    return str
+}
+
+func (T2) Method1(str string) string {
+    return str
+}
+</code></pre>
+
+<p>If a Type implements an interface then that Type value can be used wherever we need to use interface value. What it means is, we can pass a value of Type implementing an interface if a function accepts a parameter of the type interface.</p>
+
+<pre><code class="language-go">type Interface interface {
+    Method(string) string
+}
+
+type T struct{}
+
+func (T) Method(str string) string {
+    return str
+}
+
+func f1(i Interface) {
+    fmt.Println(i.Method(&quot;Hello&quot;))
+}
+func main() {
+    f1(T{})
+}
+</code></pre>
+
+<p>An interface type can hold a value of any Type implementing the interface. When we call a method on the interface value then Go dynamically determines which Type method should be invoked based on the type of value it is holding.</p>
+
+<pre><code class="language-go">type Interface interface {
+    Method(str string)
+}
+type T1 struct{}
+type T2 struct{}
+
+func (T1) Method(str string) {
+    fmt.Println(str + &quot; from T1 Method&quot;)
+}
+func (T2) Method(str string) {
+    fmt.Println(str + &quot; from T2 Method&quot;)
+}
+func main() {
+    var i Interface
+    i = T1{}
+    i.Method(&quot;Hello&quot;) //invoke Method of T1
+    i = T2{}
+    i.Method(&quot;Hello&quot;) //invoke method of T2
+}
+</code></pre>
+
+<p>When we invoke <code>Method</code> on <code>i</code> it checks the type of value it’s holding and calls the corresponding implementation of the <code>Method</code>. Above code gives below output when we run it.</p>
+
+<pre><code class="language-shell">Hello from T1 Method
+Hello from T2 Method
+</code></pre>
+
+<p>An interface type value allows accessing only methods of interfaces. It hides methods of the exact type which value it holds.</p>
+
+<pre><code class="language-go">type Interface interface {
+    Method(str string)
+}
+
+type T1 struct{}
+
+func (T1) Method(str string) {
+   fmt.Println(str + &quot; from T1 Method&quot;)
+}
+func (T1) Method1(str string) {
+   fmt.Println(str + &quot; from Method1 of T1&quot;)
+}
+func main() {
+    var i Interface
+    i = T1{}
+    i.Method1(&quot;Hello&quot;) //throws an error
+}
+</code></pre>
+
+<p>when we will try to run above code Go compiler will throw an error saying</p>
+
+<pre><code class="language-shell">i.Method1 undefined (type Interface has no field or method Method1)
+</code></pre>
+
+<h2 id="empty-interface">Empty Interface</h2>
+
+<p>We can also have an interface which does not have any methods. We call empty interface. Empty interfaces are satisfiable by any type.</p>
+
+<pre><code class="language-go">type Interface interface {} //An empty interface
+
+type T struct{}
+
+func (T) Method(str string) {
+    fmt.Println(&quot; &quot; + &quot; from Method&quot;)
+}
+func main() {
+    var i Interface = T{}
+    _ = i
+}
+</code></pre>
+
+<p>Thanks for the read. If you find something wrong or would like to suggest something please leave a comment below.</p>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "viveksynghblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+<script src="https://www.viveksyngh.info/blog/js/all.min.js"></script>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113545356-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
